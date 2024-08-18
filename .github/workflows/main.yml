@@ -1,8 +1,5 @@
 name: Upload Website
 
-env:
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-
 on:
   push:
     branches: [ "release" ]
@@ -30,11 +27,11 @@ jobs:
 
       - name: Upload S3
         uses: shallwefootball/upload-s3-action@v1.3.3
-        with:
-          args: --acl public-read
         env:
+          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+        with:
           source_dir: build/
-          destination_dir: /
           aws_bucket: ${{ secrets.AWS_S3_BUCKET }}
           aws_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        
