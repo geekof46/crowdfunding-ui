@@ -16,7 +16,7 @@ function ProjectCard(props) {
             longer.
           </Card.Text>
           {
-            props.action == "Donate" &&
+            props.action === "Donate" &&
             <XModal title="Donation" variant="primary" action="Donate">
               <Form>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -38,7 +38,7 @@ function ProjectCard(props) {
             </XModal>
           }
           {
-            props.action == "Request" &&
+            props.action === "Request" &&
             <Button variant="primary">Request for Donation</Button>
           }
 
