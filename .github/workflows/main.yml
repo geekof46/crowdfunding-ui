@@ -1,4 +1,4 @@
-name: Upload crowdfund website
+name: Upload raisefund website
 
 on:
   push:
