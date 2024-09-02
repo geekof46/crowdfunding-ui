@@ -11,7 +11,7 @@ function XModal(props){
 
   return (
     <>
-      <Button variant="primary" style={{width:'80%'}} onClick={handleShow}>
+      <Button  variant="primary" style={{width:'80%',backgroundColor :'#5fb4e7'}} onClick={handleShow}>
         {props.action}
       </Button>
 
@@ -23,14 +23,6 @@ function XModal(props){
           {console.log(props)}
           {props.children}
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            action
-          </Button>
-        </Modal.Footer>
       </Modal>
     </>
   );
