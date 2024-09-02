@@ -95,21 +95,21 @@ const ProjectForm = () => {
                 />
             </Form.Group>
             {
-                (respMessage != "" && isSuccess) &&
+                (respMessage !== "" && isSuccess) &&
                 <Alert key="Primary" variant="success">
                     {respMessage}
                 </Alert>
             }
 
             {
-                (respMessage != "" && !isSuccess) &&
+                (respMessage !== "" && !isSuccess) &&
                 <Alert key="Primary" variant="danger">
                     {respMessage}
                 </Alert>
             }
 
             {
-                (respMessage == "") &&
+                (respMessage === "") &&
                 <>
                 <Button disabled={disabled} style={{ margin: '10px', marginLeft: '80%' }} type="submit">Submit</Button>
                 </>

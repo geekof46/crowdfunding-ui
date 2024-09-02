@@ -28,7 +28,7 @@ function ProjectCard(props: ProjectCardProps) {
         <Card.Body>
           <Card.Title>{props.projectDetails.name}</Card.Title>
           {
-            (props.projectDetails.status != "ARCHIVED")
+            (props.projectDetails.status !== "ARCHIVED")
             && <ProgressBar style={{ backgroundColor: 'black' }} animated variant="info" label={
               props.projectDetails.receivedDonationAmount + "/" + props.projectDetails.requestedAmount
             }
@@ -40,14 +40,14 @@ function ProjectCard(props: ProjectCardProps) {
           <Card.Footer>
 
             {
-              props.projectDetails.status == "ARCHIVED" &&
+              props.projectDetails.status === "ARCHIVED" &&
               <>
                 <Card.Text>Donation Received : {props.projectDetails.receivedDonationAmount} $</Card.Text>
               </>
             }
 
             {
-              props.userRole == UserRole.DONOR &&
+              props.userRole === UserRole.DONOR &&
               <>
                 <Row>
                   <Col xs={1}>
