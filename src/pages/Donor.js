@@ -15,7 +15,7 @@ function Donor() {
 
     useEffect(() => {
         setIsloading(true)
-        fetch("https://m754i5hsn5.execute-api.us-west-2.amazonaws.com/dev/api/v1/projects?status=REQUESTED&pageSize=10&next=&userId=USER-c05ca4a2")
+        fetch("https://m754i5hsn5.execute-api.us-west-2.amazonaws.com/dev/api/v1/projects?status=REQUESTED&pageSize=10&next=&userId=USER-72e6c30d")
             .then(response => response.json())
             .then(json => {
                 console.log(json)
