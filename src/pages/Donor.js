@@ -15,11 +15,11 @@ function Donor() {
 
     useEffect(() => {
         setIsloading(true)
-        fetch('https://m754i5hsn5.execute-api.us-west-2.amazonaws.com/dev/api/v1/users/USER-c05ca4a2/projects?status=REQUESTED&pageSize=10&next=')
+        fetch("https://m754i5hsn5.execute-api.us-west-2.amazonaws.com/dev/api/v1/projects?status=REQUESTED&pageSize=10&next=&userId=USER-c05ca4a2")
             .then(response => response.json())
             .then(json => {
                 console.log(json)
-                setRequestedProjectData(json)
+                setRequestedProjectData(json.records)
                 setIsloading(false)
             })
             .catch(error => console.error(error));

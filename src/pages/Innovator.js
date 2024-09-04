@@ -27,7 +27,7 @@ function Innovator() {
       .then(response => response.json())
       .then(json => {
         console.log(json)
-        setRequestedProjectData(json)
+        setRequestedProjectData(json.records)
         setIsloading(false)
       })
       .catch(error => console.error(error));
@@ -39,7 +39,7 @@ function Innovator() {
       .then(response => response.json())
       .then(json => {
         console.log(json);
-        setArchivedProjectData(json)
+        setArchivedProjectData(json.records)
         setIsloading(false)
       })
       .catch(error => console.error(error));
